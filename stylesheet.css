@@ -927,3 +927,36 @@ html {
   80% { transform: translate(1px, -1px); }
   100% { transform: translate(0); }
 }
+
+@media (max-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr;  /* single column */
+    gap: 1.5rem;                 /* smaller gap for phone */
+    padding-left: 10px;          /* less padding on mobile */
+    margin-top: 50px;            /* less top margin on mobile */
+  }
+
+  .contact-text h2 {
+    font-size: 40px;             /* smaller heading */
+  }
+
+  .contact-text p,
+  .contact-text h1 {
+    font-size: 16px;             /* adjust text for readability */
+  }
+
+  .contact-form form input,
+  .contact-form form textarea {
+    width: 95%;                  /* full width on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    min-height: 50vh; /* reduce height */
+    padding-top: 200px; /* ensure text below image */
+  }
+}
