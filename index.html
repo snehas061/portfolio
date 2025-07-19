@@ -326,17 +326,21 @@
   </div>
 
  <div class="contact-form">
-  <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
+  <form
+  action="https://formspree.io/f/xeozeokj"
+  method="POST"
+>
   <input type="text" name="name" placeholder="Enter Your Name" required />
   <input type="email" name="email" placeholder="Enter Your Email" required />
   <input type="text" name="subject" placeholder="Enter Your Subject" />
   <textarea name="message" cols="30" rows="6" placeholder="Enter Your Message" required></textarea>
-
-  <!-- Hidden input to help Netlify detect form -->
-  <input type="hidden" name="form-name" value="contact" />
+  
+  <!-- Add hidden input for redirect -->
+  <input type="hidden" name="_next" value="https://portfolio-createdbysneha.netlify.app/thank-you.html" />
 
   <input type="submit" value="Submit" class="send" />
 </form>
+
 </div>
 
 
