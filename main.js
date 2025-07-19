@@ -41,3 +41,32 @@ document.addEventListener("DOMContentLoaded", function () {
     spacing: 16.00
   });
 });
+
+const firebaseConfig = {
+  apiKey: "YOUR_KEY",
+  authDomain: "YOUR_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_BUCKET",
+  messagingSenderId: "YOUR_ID",
+  appId: "YOUR_APP_ID"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  db.collection("contacts").add({
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+    timestamp: new Date()
+  }).then(() => {
+    alert("Message sent!");
+    document.querySelector("form").reset();
+  }).catch((error) => {
+    alert("Error: " + error);
+  });
+});
+

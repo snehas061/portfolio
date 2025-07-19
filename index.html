@@ -13,6 +13,10 @@
    <script src="https://cdn.jsdelivr.net/npm/three@0.124.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js"></script>
+
+
  
   </head>
   <body>
@@ -302,34 +306,37 @@
             </section>
 
             <section class="contact" id="contact">
-              <div class="contact-text">
-                <h2>Contact <span>Me</span></h2>
-                <h4>Let's Build Something Amazing Together</h4>
-                <p>I’m currently open to full-time, internship, and freelance opportunities in web development and front-end projects. 
-                If you have a project in mind or just want to connect, feel free to drop a message! 
-                I’d love to help bring your ideas to life with clean, user-friendly, and responsive designs.</p>
-                <div class="contact-list">
-                  <li><i class="bx bxs-send'></i> snehaa.sharma061@gmail.com</li>
-                  <li><i class='bx bxs-phone'></i>7828008061</li>
-                </div>
-                <div class="cpntact-icons">
-                  <a href=https://www.linkedin.com/snehasharma" target="_blank"/><i class='bx bxl-linkedin-square'></i></a>
-                  <a href="https://www.instagram.com/sneh_a.___"  target="_blank"><i class='bx bxl-instagram'></i></a>
-                  <a href="https://www.twitter.com/sneha0061"  target="_blank"><i class='bx bxl-twitter'></i></a>
-                </div>
-              </div>
+  <div class="contact-text">
+    <h2>Contact <span>Me</span></h2>
+    <h4>Let's Build Something Amazing Together</h4>
+    <p>
+      I’m currently open to full-time, internship, and freelance opportunities in web development and front-end projects. 
+      If you have a project in mind or just want to connect, feel free to drop a message! 
+      I’d love to help bring your ideas to life with clean, user-friendly, and responsive designs.
+    </p>
+    <ul class="contact-list">
+      <li><i class='bx bxs-send'></i> snehaa.sharma061@gmail.com</li>
+      <li><i class='bx bxs-phone'></i> 7828008061</li>
+    </ul>
+    <div class="contact-icons">
+      <a href="https://www.linkedin.com/snehasharma" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+      <a href="https://www.instagram.com/sneh_a.___" target="_blank"><i class='bx bxl-instagram'></i></a>
+      <a href="https://www.twitter.com/sneha0061" target="_blank"><i class='bx bxl-twitter'></i></a>
+    </div>
+  </div>
 
-              <div class="contact-form" id="contact">
-                <form action="">
-                  <input type="" placeholder="Enter Your name" required>
-                  <input type="" placeholder="Enter Your Email" required>
-
-                  <input type="" placeholder="Enter Your Subject">
-                  <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message"  required></textarea>
-                  <input type="submit" value="submit" class="send">
-                </form>
-              </div>
-            </section>
+ <div class="contact-form">
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact" />
+    
+    <input type="text" name="name" placeholder="Enter Your Name" required />
+    <input type="email" name="email" placeholder="Enter Your Email" required />
+    <input type="text" name="subject" placeholder="Enter Your Subject" />
+    <textarea name="message" cols="30" rows="6" placeholder="Enter Your Message" required></textarea>
+    
+    <input type="submit" value="Submit" class="send" />
+  </form>
+</div>
 
             <footer style="text-align: center; padding: 20px; font-size: 12px; color: rgba(0, 0, 0, 0.6);">
            © 2025 Sneha Sharma. All rights reserved.
